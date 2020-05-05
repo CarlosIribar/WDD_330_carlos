@@ -1,0 +1,65 @@
+<h2> THIS</h2>
+<p> There exists a shorter syntax for methods in an object literal:</p>
+<pre class="line-numbers  language-javascript">
+    <code class=" language-javascript">
+        <code class="token comment">// these objects do the same</code>
+        user <code class="token operator">=</code> <code class="token punctuation">{</code>
+        <code class="token function-variable function">sayHi</code><code class="token punctuation">:</code> <code class="token keyword">function</code><code class="token punctuation">(</code><code class="token punctuation">)</code> <code class="token punctuation">{</code>
+        <code class="token function">alert</code><code class="token punctuation">(</code><code class="token string">"Hello"</code><code class="token punctuation">)</code><code class="token punctuation">;</code>
+        <code class="token punctuation">}</code>
+        <code class="token punctuation">}</code><code class="token punctuation">;</code>
+        <code class="token comment">// method shorthand looks better, right?</code>
+        user <code class="token operator">=</code> <code class="token punctuation">{</code>
+        <code class="token function">sayHi</code><code class="token punctuation">(</code><code class="token punctuation">)</code> <code class="token punctuation">{</code> <code class="token comment">// same as "sayHi: function()"</code>
+        <code class="token function">alert</code><code class="token punctuation">(</code><code class="token string">"Hello"</code><code class="token punctuation">)</code><code class="token punctuation">;</code>
+        <code class="token punctuation">}</code>
+        <code class="token punctuation">}</code><code class="token punctuation">;</code></code><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span>
+</pre>
+<p>To tell the truth, the notations are not fully identical. There are subtle differences</p>
+<pre class="line-numbers  language-javascript"><code class=" language-javascript"><code class="token keyword">function</code> <code class="token function">sayHi</code><code class="token punctuation">(</code><code class="token punctuation">)</code> <code class="token punctuation">{</code>
+    <code class="token function">alert</code><code class="token punctuation">(</code><code class="token keyword">this</code><code class="token punctuation">)</code><code class="token punctuation">;</code>
+    <code class="token punctuation">}</code>
+
+    <code class="token function">sayHi</code><code class="token punctuation">(</code><code class="token punctuation">)</code><code class="token punctuation">;</code> <code class="token comment">// undefined</code></code><span class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span>
+</pre>
+<p> In this case this is undefined in strict mode. If we try to access this.name, there will be an error.</p>
+<h2> Object</h2>
+<h4>Other way to create an object</h4>
+<code>const spiderman = new Object();</code>
+<p>This method is not recommended, however, and the object literal notation is the preferred way of creating objects. The obvious reason is because it requires less typing and provides a concise way of initializing an object and its properties in one statement</p>
+<h4>Computed properties</h4>
+<p>The ability to create objects with computed property keys was introduced in ES6. This means that JavaScript code can be placed inside square brackets and the property key will be the return value of that code. This can be seen in the example below where the + operator is used to concatenate the strings 'catch' and 'phrase':</p>
+<code>const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };</code>
+<h4>Checking if Properties or Methods Exist</h4>
+<p>The in operator can be used to check whether an object has a particular property. So, for example, we can check if the superman object has a property called city using this code:</p>
+<code>'city' in superman; //false</code>
+<h4>Object Entries</h4>
+<p> <b>Object.entries()</b> is also part of ES2017 and returns an array of key-value pairs. These key-value pairs are returned in arrays, but they can be destructured and accessed individually using the following notation:</p>
+<h2> Document Object Model</h2>
+<h4> History of the DOM</h4>
+<p>
+In the early days of the web, browser vendors such as Netscape and Microsoft developed their own distinct ways of accessing and altering parts of a web page. In the beginning, they tended to focus on common page elements such as images, links and forms – this was known as Dynamic HTML (DHTML). These methods became known as DOM level 0, or legacy DOM. Some of the more common methods, such as those used for selecting images and forms, can still be used in the current DOM.
+</p>
+<p>
+The World Wide Web Consortium (W3C) started to standardize the process, and created the DOM level 1 in 1998. This introduced a complete model for web pages that allowed every part of them to be navigated.
+</p>
+<p>        
+The DOM level 2 specification was published in 2000 and introduced the popular getElementById() method, which made it much easier to access specific elements on a web page. The DOM level 3 specification was published in 2004, and since then the W3C has abandoned using levels. The DOM specification is developed as aliving standard.
+</p>
+<h4>Query Selectors</h4>
+<p>The document.querySelector() method allows you to use CSS notation to find thefirstelement in the document that matches that matches a CSS selector provided as an argument. If no elements match, it will return null</p>
+<p>The document.querySelectorAll() method also uses CSS notation but returns a node list ofallthe elements in the document that match the CSS query selector. If no elements match, it will return an empty node list.</p>
+<h4> className vs classList</h4>
+<p>The classList property is a list of all the classes an element has. It has a number of methods that make it easier to modify the class of an element. It’s supported in all modern browsers and in Internet Explorer from version 10 onwards.</p>
+<p>className is a string with all the class, modify that property overrides old classes</p>
+<h4>getComputedStyle</h4>
+<p>There is a function called getComputedStyle() that will retrieve all the style information of an element that is given as a parameter. This is a read-only property, so is only used for finding out information about the style of an element.</p>
+<h2> Events </h2>
+<h4>Using click and doubleclick On The Same Element</h4>
+<p>You should be very cautious of attaching both a click and doubleclick event to the same element. This is because it’s impossible to tell if a click is the first click of a doubleclick or just a single click. This means that a doubleclick event willalwayscause the click event to fire.</p>
+<h4> Touch events alert</h4>
+<p>Touch events are complex and difficult to implement. Many of the properties and methods mentioned above are still marked as being experimental and not widely implemented in browsers.</p>
+<h4>Event Propagation</h4>
+<p>Event propagation is the order that the events fire on each element. There are two forms of event propagation: bubbling and capturing. </p>
+<p>Bubbling is when the event fires on the element clicked on first, then bubbles up the document tree, firing an event on each parent element until it reaches the root node.</p>
+<p>Capturing starts by firing an event on the root element, then propagates downwards, firing an event on each child element until it reaches the target element that was clicked on.</p>
