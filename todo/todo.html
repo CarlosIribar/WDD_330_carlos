@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="todo.css">
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+    <div class="app">
+        <section>
+            <h1>Todos</h1>
+        </section>
+        <section>
+            <div class="main-container">
+                <ul id="list-container">
+                </ul>
+                <div class="footer-list">
+                    <div class="left">
+                        3 task left
+                    </div>
+                    <button data-id="all" class="all">All</button>
+                    <button data-id="active" class="active">Active</button>
+                    <button data-id="completed" class="completed">Completed</button>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div> Add todo: </div>
+            <input class="new" id="new" type="text"/>
+            <button class="add">+</button>
+        </footer>
+    </div>
+    </body> 
+</html>
