@@ -1,0 +1,28 @@
+<h2> Further Functions</h2>
+<h4>call vs apply</h4>
+<p>The difference between call() and apply() is that call() passes all arguments after the first one on to the invoked function, while apply() takes an array as its second argument and passes the members of that array as arguments</p>
+<h4>Memoization</h4>
+<p>f a function takes some time to compute a return value, we can save the result in a cache property. Then if the same argument is used again later, we can return the value from the cache, rather than having to compute the result again. For example, say squaring a number was an expensive computational operation that took a long time. We could rewrite the square() function so it saved each result in a cache object that is a property of the function:</p>
+<h4>Generators</h4>
+<p>ES6 introduced support for generators. These are special functions used to produce iterators that maintain the state of a value.
+ To define a generator function, an asterisk symbol ( * ) is placed after the function declaration, like so:</p>
+
+
+<h2> Ajax</h2>
+<h4>Same origin</h4>
+<p>The same-origin policy in browsers blocks all requests from a domain that is different from the page making the request. This policy is enforced by all modern browsers and is to stop any malicious JavaScript being run from an external source. The problem is that the APIs of many websites rely on data being transferred across domains.
+    Cross-origin resource sharing (CORS)is a solution to this problem as it allows resources to be requested from another website outside the original domain. The CORS standard works by using HTTP headers to indicate which domains can receive data. A website can have the necessary information in its headers to allow external sites access to its API data. Most modern browsers support this method and respect the restrictions specified in the headers.</p>
+<h4>Fetch Api</h4>
+<p>The XMLHttpRequest object was finally standardized </p>
+<p>t has since been superseded by theFetch API, which is currently a living standard for requesting and sending data asynchronously across a network. The Fetch API uses promises to avoid callback hell, and also streamlines a number of concepts that had become cumbersome when using the XMLHttpRequest object.</p>
+<h4>Example</h4>
+<p> fetch('https://example.com/data')
+    .then( // code that handles the response )
+    .catch( // code that runs if the server returns an error )</p>
+<h5>Redirects</h5>
+<p>he redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL.</p>
+<h5>Other types of responses</h5>
+<p>Blob, text, json, object</p>
+<h5>Form Data</h5>
+<p>If a form is passed to this constructor function as an argument, the form data instance will serialize all the data automatically, ready to be sent using Ajax. In our last example, we created the task manually based on the data provided in the form. The FormData interface helps to reduce the amount of code needed when submitting forms.</p>
+<p>const data = new FormData();</p>
