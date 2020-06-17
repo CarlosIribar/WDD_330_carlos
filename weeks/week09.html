@@ -1,0 +1,34 @@
+<h2>BOM</h2>
+<p>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen.</p>
+<h4>Dialogs</h4>
+<p> 3 types: alert, prompt, confirm</p>
+<h4>Navigator</h4>
+<p>The Navigator object contains information about the browser being used. Its userAgent property will return information about the browser and operating system being used. </p>
+<h4>Location</h4>
+<p>The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.</p>
+<h4>History</h4>
+<p>he window.history property can be used to access information about any previously visited pages in the current browser session. Avoid confusing this with the new HTML5 History API. (See http://www.sitepoint.com/javascript-history-pushstate/ post for details.)</p>
+<h4>Screen</h4>
+<p>The window.screen object contains information about the screen the browser is displayed on. You can find out the height and width of the screen in pixels using the height and width properties respectively</p>
+<h4>Document</h4>
+<p>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window. In Chapter 6, we covered the Document Object Model and the properties and methods used to manipulate items on the page. The document object contains a few other methods that are worth looking at.</p>
+<h4>Cookies</h4>
+<p>Cookies are small files that are saved locally on a user’s computer. They were invented by Netscape as a way of getting round HTTP being a stateless protocol. This means that a browser does not remember anything from one request to another. So every time a user visits a page, nothing about any previous visits is remembered. Cookies can be used to sidestep this problem by storing information that can then be retrieved between requests.
+   A restriction of cookies is that they can only be read by a web page from the same domain that set them. This is to stop sites being able to access information about users, such as other sites they have visited. Cookies are also limited to storing up to 4KB of data, although 20 cookies are allowed per domain, which can add up to quite a lot of data.</p>
+<h4>Timing Functions</h4>    
+<p>setTimeout, setInterval and clearInterval</p>
+<h2>HTML5 APIs</h2>
+<h4>The data- Attribute</h4>
+<p>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. They’re also private to a page, so are not intended to be used by an external service – their sole purpose is to be used by a JavaScript program. This means they’re perfect for adding data that can be used as a hook that the program utilizes to access information about a particular element on the page.</p>
+<h4>HTML5 Web Storage</h4>
+<p>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use. This makes it perfect for storing information about users, as well as storing application-specific information that can then be used during future sessions</p>
+<h4>Geolocation</h4>
+<p>The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. This information can then be used to filter data based on the user's location or speed and direction of travel. An example of this might be a search function that returns results based on your location. Because of privacy concerns, permission to use this has to be granted by the user first.</p>
+<h4>Web workers</h4>
+<p>We saw in earlier chapters that JavaScript is a single-threaded language, meaning that only one process can run at one time. Web workers allow processes to be run in the background, adding support for concurrency in JavaScript. The idea is that any processes that could take a long time are carried out in the background, so a website will continue to function without fear of the dreaded 'script has become unresponsive' message that occurs when a script runs for too long,</p>
+<h4>Websockets</h4>
+<p>As we saw in the last chapter, the main form of communication on the web has always been the HTTP protocol. This uses a system of request and response to send data back and forth. A problem with this method of communication is when you only get a response when a request is sent. But what if the response comes later? For example, imagine a chat application. You send a message to somebody then wait for a reply, but you can't get a reply unless you send them another request... and you'll only get the reply if they have sent the response when you send your request. How long do you wait until you send the next request? This was partially solved using Ajax and a method called ‘polling’ where a request was periodically sent to see if there had been a response.</p>
+<h4>Notifications</h4>
+<p>The Notification API allows you to show messages using the system's notifications. This is usually a popup in the corner of the screen, but it changes depending on the operating system. An advantage of using the system notification is that they will still be displayed even if the web page that calls them isn't the current tab.</p>
+<h4>Multimedia</h4>
+<p>Before HTML5, it was notoriously difficult to display audio and video in browsers, and plugins such as Flash often had to be used. HTML5 introduced the <audio> and <video> tags used to insert audio and video clips into a web page. It also introduced a Media API for controlling the playback of the clips using JavaScript.</p>
