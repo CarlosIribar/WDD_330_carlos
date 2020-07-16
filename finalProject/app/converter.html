@@ -1,0 +1,92 @@
+<html>
+    <head>      
+        <link rel="stylesheet" type="text/css" href="/finalProject/app/assets/styles/salesforce-lightning-design-system.css" />
+        <link rel="stylesheet" href="converter.css">
+        <script type="module" src="main.js"></script>
+    </head>
+    <body>
+        <div class="main-container">
+            <nav>
+                <div class="slds-page-header" role="banner">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                        <svg aria-hidden="true" class="slds-icon slds-icon--large slds-icon-standard-opportunity">
+                            <use xlink:href="/finalProject/app/assets/icons/custom-sprite/svg/symbols.svg#custom17"></use>
+                        </svg>
+                        </div>
+                        <div class="slds-media__body">
+                        <p class="slds-page-header__title slds-truncate slds-align-middle" title="Converter">Currency Calculator</p>
+                        <p class="slds-text-body--small slds-page-header__info">Choose the currency pair and watch the conversion</p>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <section class="converter">
+                <div class="col column-1">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-01">FROM</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                            <select class="slds-select" id="select-01">
+                                <option value="CAD">CAD</option>
+                                <option value="JPY">JPY</option>
+                                <option value="PHP">PHP</option>
+                                <option value="NZD">NZD</option>
+                                <option value="USD">USD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="HRK">HRK</option>
+                                <option value="AUD">AUD</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element__control input-number">
+                        <input id="number1" class="slds-input" type="number" placeholder="" />
+                    </div>
+                </div>
+                <div class="col column-2">
+                    <button class="slds-button slds-button--icon" id="switch">
+                        <svg aria-hidden="true" class="slds-button__icon slds-button__icon--large">
+                            <use xlink:href="/finalProject/app/assets/icons/utility-sprite/svg/symbols.svg#sort"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Switch</span>
+                    </button>
+                </div>
+                <div class="col column-3">
+                    <div class="slds-form-element">
+                        <label class="slds-form-element__label" for="select-02">TO</label>
+                        <div class="slds-form-element__control">
+                            <div class="slds-select_container">
+                            <select class="slds-select" id="select-02">
+                                <option value="USD">USD</option>
+                                <option value="CAD">CAD</option>
+                                <option value="JPY">JPY</option>
+                                <option value="PHP">PHP</option>
+                                <option value="NZD">NZD</option>
+                                <option value="USD">USD</option>
+                                <option value="GBP">GBP</option>
+                                <option value="HRK">HRK</option>
+                                <option value="AUD">AUD</option>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-form-element__control input-number">
+                        <input id="number2" disabled class="slds-input" type="number" placeholder="" />
+                    </div>
+                </div>
+            </section>
+            <section class="actions">
+                <img id="spinner" class="spinnner-img hide" src="/finalProject/app/assets/images/spinners/slds_spinner_brand.gif"/>
+                <button id="convert" class="slds-button slds-button--brand convert">Convert</button>
+            </section>
+            <section id="canvas-container" class="historical chart-container hide">
+                <h2>Historical last month</h2>
+                <canvas id="spark" width="500" height="500"></canvas>
+            </section>
+            <section class="historical">
+                <button id="historical" lass="slds-button slds-button--brand">See Historical</button>
+            </section>
+        </div>
+    </body>
+</html>

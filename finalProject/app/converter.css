@@ -1,0 +1,113 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.main-container {
+    padding: 0;
+    max-width: 1024px;
+    margin: auto;
+}
+
+nav {
+    position: sticky;
+    text-transform: uppercase;
+}
+
+.converter {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: auto 100px auto;
+}
+
+.column-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.historical {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.input-number {
+    margin-top: 28px;
+}
+
+.convert {
+    width: 100%;
+}
+
+.spinnner-img {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+.actions {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#chart{
+    border:solid;
+    border-width:0 0 2px 2px;
+    border-color:#0070d2;
+}
+
+#weeks{
+    margin-left:60px;
+}
+#weeks>span{
+    width: 60px;
+    display: inline-block;
+    color: black;
+    font-size:16px;
+}
+#weeks>span:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background-color: #0070d2;
+    border-radius: 50%;
+    bottom: 20px;
+}
+#values{
+    position:absolute;
+    top:0;
+    left:-30px;
+    margin-top: -2px;
+}
+#values>span{
+    display:block;
+    color:black;
+    font-size:16px;
+    height:30px;
+}
+#values>span:after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    background-color: #0070d2;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+#chart-wrapper{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+}
+.chart-container {
+    position: relative;
+    height: 192px;
+}
